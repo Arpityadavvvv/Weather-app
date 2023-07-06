@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js>
+ 
+
+ 
+ 
+</head>
+<body>
+    <div class="wrapper">
+
+        <div id="main_heading">
+            Weather App
+        </div>
+
+        <div class="tab-container">
+            <p class="tab" data-userWeather>your weather </p>
+            <p class="tab" data-searchWeather>search weather </p>
+        </div>
+
+        <!-- The changing containers 3  -->
+     <div class=" weather-container">
+
+        <!-- Permission container [1] -->
+        <div class="sub-container grant-location-container">
+
+            <img src="location.png" loading="lazy" width="80" height="90">
+
+            <p>Grant Location Access</p>
+
+            <p>Allow access to get weather information </p>
+
+            <button data-grantAccess class="btn" >
+                Grant Access
+            </button>
+             
+        </div>
+
+        <!-- Search weather form  -->
+       <form action="" class="form-container" data-searchForm >
+
+            <input type="text" data-searchInput placeholder="write city here" id="search-bar">
+           
+            <button class="btn">
+                <img src="search.png" width="20px" height="20px">
+            </button>
+        </form>
+
+        <!-- Loading screen container  -->
+        <div class=" sub-container loading-container"> 
+            <img src="loading.gif" width="150px" height="150px">
+            <p>Loading</p>
+        </div>
+
+        <!-- city weather report container  -->
+        <div class="sub-container user-info-container">
+
+            <!-- name and flag of location which both are dynamic -->
+            <div class="name">
+                <p data-cityName></p>
+                <img data-countryIcon >
+            </div>
+
+            <p  id="description" data-weatherDesc></p>
+
+            <img id="image" data-weatherIcon >
+            
+            <p class="temp-tool"  data-temp></p>
+
+            <!-- div containing diffrent cards -->
+            <div class="parameter-container">
+
+                <div class="wind-tool">
+                    <img src="wind.png" width="" height="">
+                    <p id="wind-name">Windspeed</p>
+                    <p data-wind></p>
+                </div>
+
+                <div class="humidity-tool">
+                    <img src="humidity.png" width="" height="">
+                    <p id="humid-name">Humidity</p>
+                    <p data-humidity></p>
+
+                </div>
+                <div class="clouds-tool">
+                    <img src="cloud.png" width="" height="">
+                    <p id="clouds-name">Clouds</p>
+                    <p data-cloud></p>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+      
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

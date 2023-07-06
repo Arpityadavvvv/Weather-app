@@ -1,0 +1,279 @@
+*,
+*::before
+,*::after
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Merriweather Sans', sans-serif;
+
+}
+
+:root {
+    --colorDark1: #112D4E;
+    --colorDark2: #3F72AF;
+    --colorLight1: #DBE2EF;
+    --colorLight2: #F9F7F7;
+}
+.wrapper
+{
+    background: linear-gradient(90deg, rgba(233, 30, 99, 0.5) 2%, rgba(103, 58, 183, 0.94) 100%);
+    width:100vw;
+    height:100vh;
+    color: var(--colorLight2);
+    padding: 2rem 2rem rem 2rem ;
+   
+}
+
+#main_heading
+{
+    text-align: center;
+    text-transform:uppercase;
+    padding-top: 20px;
+    font-size: x-large;
+    
+}
+
+.tab-container
+{
+    display: flex;
+    margin: 0 auto;
+    margin-top: 3rem;
+    width:90%;
+    max-width: 550px;  /* search tab and user tab */
+    justify-content: space-between; /* isse middle me aagye */
+}
+
+.tab{
+    cursor: pointer;
+
+    
+    letter-spacing: 1.75px;
+    padding: 5px 8px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: large;
+}
+
+.btn{
+    all: unset;
+    /* appearance: none;
+    border:none;
+    color: white; */
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    border-radius: 5px;
+    background: linear-gradient(90deg, rgba(156, 39, 176, 1) 29%, rgba(81, 3, 140, 1) 98%, rgba(255, 235, 59, 0.57) 100%, rgba(255, 235, 59, 0.57) 100%, rgba(103, 58, 183, 1) 100%, rgba(33, 150, 243, 1) 100%);
+
+    cursor: pointer;
+    padding: 10px 30px;
+    margin-bottom: 10px;
+}
+
+.weather-container
+{
+    margin-block:4rem;
+    margin:0 auto;
+}
+
+
+/* ye sub ko middle me krdega isliye bnaya hai  */
+.sub-container{
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+}
+
+.grant-location-container
+{
+    display:none; 
+    margin-top: 3rem;
+}
+
+.grant-location-container.active{
+   display:flex;
+   flex-direction: column;
+}
+
+.grant-location-container img{
+   margin-bottom: 2rem;
+}
+
+/* ye first of type ka mtlb hai ki jo us contianer me pehla P hoga wo usme ye sb kro  */
+.grant-location-container p:first-of-type{
+   font-size: 1.75rem;
+   font-weight: 600; 
+}
+
+/* ye last of type ka mtlb hai ki jo us container me last p hoga usme ye sb kro  */
+.grant-location-container p:last-of-type{
+   font-size:0.85rem;
+   font-weight: 500;
+   margin-top: 0.75rem;
+   margin-bottom: 1.75rem;
+   letter-spacing: 0.75px;
+}
+
+.weather-container
+{
+    max-width: 450px;
+    margin-top: 4rem;
+
+}
+.tab.current-tab {
+    background: linear-gradient(90deg, rgba(156, 39, 176, 1) 29%, rgba(81, 3, 140, 1) 98%, rgba(255, 235, 59, 0.57) 100%, rgba(255, 235, 59, 0.57) 100%, rgba(103, 58, 183, 1) 100%, rgba(33, 150, 243, 1) 100%);
+    border-radius: 4px;
+}
+
+.loading-container
+{
+    display:none;
+}
+
+.loading-container.active
+{
+    display:flex;
+}
+
+.loading-container
+{
+    text-transform: uppercase;
+}
+
+.name
+{
+    display: flex;
+    align-items: center;
+    gap: 0 0.5rem;
+    margin-bottom: 1rem;
+
+}
+
+.name p 
+{
+    font-size:2rem;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.name img
+{
+    height: 30px;
+    width: 30px;
+    object-fit: contain;
+    
+}
+
+#description
+{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: large;
+
+}
+
+#image
+{
+ 
+    height: 55px;
+    width: 60px;
+}
+
+.temp-tool
+{
+  font-size:xx-large;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 200;
+  margin-top: 8px;
+}
+
+.parameter-container
+{
+    display: flex;
+    max-width: 450px;
+    margin-top: 2rem;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 4rem 4rem;
+    
+}
+.wind-tool,
+.humidity-tool,
+.clouds-tool
+{
+    display:flex;
+    min-width: 120px;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center ;
+    gap:3px;
+    background-color: rgba(255, 255, 255, 0.4);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    padding: 8px 14px 7px 7px;
+    max-height: 104px;
+    border-radius: 2%;
+    background: linear-gradient(90deg, rgba(156, 39, 176, 1) 29%, rgba(81, 3, 140, 1) 98%, rgba(255, 235, 59, 0.57) 100%, rgba(255, 235, 59, 0.57) 100%, rgba(103, 58, 183, 1) 100%, rgba(33, 150, 243, 1) 100%);
+}
+
+.wind-tool img,
+.humidity-tool img, 
+.clouds-tool img
+{
+  width: 40px;
+  height: 40px;
+}
+
+.wind-tool p,
+.humidity-tool p, 
+.clouds-tool p
+{
+
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: large;
+    font-weight: 400;
+}
+
+.form-container
+{
+    display:none;
+    width:100%;
+  
+   gap: 1rem 1rem;
+   margin-top: 3rem;
+   margin-left: 2rem;
+    align-items: center;
+    align-items: baseline;
+  
+
+}
+
+.form-container.active{
+    display: flex;
+}
+.form-container input{
+    width: 300px;
+    max-height: 40px;
+    all:unset;
+    width: calc(100%-80px);
+    height:40px;
+    padding: 0 20px;
+    background-color:rgba(219, 226, 239, 0.5);
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    margin-left: 2rem;
+
+}
+
+
+.form-container input:focus{
+    outline: 3px solid rgba(255, 255, 255, 0.7);
+}
+.form-container.active 
+{
+    display: flex;
+}
+.user-info-container{
+    display:none;
+}
+
+.user-info-container.active{
+    display: flex;
+}
